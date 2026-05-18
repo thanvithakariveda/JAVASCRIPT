@@ -1,0 +1,107 @@
+import React from "react";
+
+const users = [
+  { name: "Aarav Sharma", email: "aarav.sharma@example.com", image: "https://randomuser.me/api/portraits/men/11.jpg" },
+  { name: "Vivaan Patel", email: "vivaan.patel@example.com", image: "https://randomuser.me/api/portraits/men/12.jpg" },
+  { name: "Aditya Singh", email: "aditya.singh@example.com", image: "https://randomuser.me/api/portraits/men/13.jpg" },
+  { name: "Sai Kumar", email: "sai.kumar@example.com", image: "https://randomuser.me/api/portraits/men/14.jpg" },
+  { name: "Rohan Reddy", email: "rohan.reddy@example.com", image: "https://randomuser.me/api/portraits/men/15.jpg" },
+  { name: "Ananya Gupta", email: "ananya.gupta@example.com", image: "https://randomuser.me/api/portraits/women/11.jpg" },
+  { name: "Isha Verma", email: "isha.verma@example.com", image: "https://randomuser.me/api/portraits/women/12.jpg" },
+  { name: "Priya Nair", email: "priya.nair@example.com", image: "https://randomuser.me/api/portraits/women/13.jpg" },
+  { name: "Sneha Das", email: "sneha.das@example.com", image: "https://randomuser.me/api/portraits/women/14.jpg" },
+  { name: "Kavya Iyer", email: "kavya.iyer@example.com", image: "https://randomuser.me/api/portraits/women/15.jpg" }
+];
+
+// Navbar Component
+function Navbar() {
+  return (
+    <div style={styles.navbar}>
+      <h2>LOGO</h2>
+      <div>
+        <span style={styles.link}>Home</span>
+        <span style={styles.link}>Signup</span>
+        <span style={styles.link}>Login</span>
+      </div>
+    </div>
+  );
+}
+
+// User Card Component
+function User({ data }) {
+  return (
+    <div style={styles.card}>
+      <img src={data.image} alt={data.name} style={styles.image} />
+      <h4>{data.name}</h4>
+      <p>{data.email}</p>
+      <button>Profile</button>
+    </div>
+  );
+}
+
+// Users List Component
+function UsersList() {
+  return (
+    <div style={styles.grid}>
+      {users.map((user, index) => (
+        <User key={index} data={user} />
+      ))}
+    </div>
+  );
+}
+
+// Footer Component
+function Footer() {
+  return (
+    <div style={styles.footer}>
+      <p>© 2026 My App</p>
+      <p>All Rights Reserved</p>
+    </div>
+  );
+}
+
+// Main App
+export default function App() {
+  return (
+    <div>
+      <Navbar />
+      <UsersList />
+      <Footer />
+    </div>
+  );
+}
+
+// Styles
+const styles = {
+  navbar: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "15px",
+    borderBottom: "1px solid #ccc"
+  },
+  link: {
+    margin: "0 10px",
+    cursor: "pointer"
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "20px",
+    padding: "20px"
+  },
+  card: {
+    border: "1px solid #ccc",
+    padding: "10px",
+    textAlign: "center",
+    borderRadius: "10px"
+  },
+  image: {
+    width: "80px",
+    borderRadius: "50%"
+  },
+  footer: {
+    textAlign: "center",
+    padding: "20px",
+    borderTop: "1px solid #ccc"
+  }
+};

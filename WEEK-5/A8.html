@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexbox Page</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#eef2f1;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:white;
+}
+
+.logo{
+width:40px;
+height:40px;
+}
+
+.menu a{
+margin:10px;
+text-decoration:none;
+color:black;
+font-size:14px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+width:200px;
+padding:20px;
+text-align:center;
+border-radius:6px;
+}
+
+.card img{
+width:80px;
+height:80px;
+border-radius:50%;
+}
+
+.tag{
+font-size:12px;
+color:white;
+background:#6c9;
+padding:3px 8px;
+border-radius:10px;
+display:inline-block;
+margin:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<img class="logo" src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Lifestyle</a>
+<a href="#">Technology</a>
+<a href="#">All articles</a>
+</div>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+<img src="https://picsum.photos/100?1">
+<div class="tag">Travel</div>
+<h4>Golden Gate Bridge</h4>
+<p>Small description about travel and bridge.</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/100?2">
+<div class="tag">Technology</div>
+<h4>We Bought a Drone!</h4>
+<p>Simple text about drone and technology.</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/100?3">
+<div class="tag">Fashion</div>
+<h4>This Week's Accessories</h4>
+<p>Short fashion article description.</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/100?4">
+<div class="tag">Clothes</div>
+<h4>Denim for Spring</h4>
+<p>Small text about clothes and style.</p>
+</div>
+
+</div>
+
+</body>
+</html>
