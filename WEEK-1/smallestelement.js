@@ -1,10 +1,18 @@
-//DAY1-4
-//4.Find the smallest element in marks array
-let marks=[12,50,62,20,50]
-let smallest =marks[0];//variable
-for(let i=1;i<marks.length;i++){//loop iterates from index 1
-    if(marks[i]<smallest){
+// 4. Find the Smallest Element in an Array
 
+let marks = [12, 50, 62, 20, 50];
+
+// Assume first element is the smallest
+let smallest = marks[0];
+
+// Loop through the array starting from index 1
+for (let i = 1; i < marks.length; i++) {
+
+    // Check if current element is smaller
+    if (marks[i] < smallest) {
+        smallest = marks[i];
     }
 }
-console.log(smallest)//12
+
+// Display the smallest value
+console.log("Smallest element is:", smallest);

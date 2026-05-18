@@ -1,29 +1,50 @@
-//DAY-1
-// 2.Find the big number in given three numbers
-function bigNumber(a,b,c)
-{
-    let a1=1;//variables
-    let b1=3;
-    let c1=4;
-        if(a1>b1 && a1>c1)
-        return a1
-    
-    else if(b1>c1 && b1>a1)
-    return b1
-    else
-        return c1
-}
-let result=bigNumber(10,2,6)
-console.log(result)
-let d=5
-let t=10
-let c=15
-if(d>t && d>c)
-    console.log("bigger number is d",d)
-else 
-if(t>c && t>d)
-    console.log("bigger number is t",t)
-else
-if(c>t && c>d)
-    console.log("bigger number is c",c)
+// DAY-1
+// 2. Find the biggest number among three numbers
 
+function bigNumber(a, b, c) {
+
+    // Check if 'a' is greater than both 'b' and 'c'
+    if (a > b && a > c) {
+        return a;
+    }
+
+    // Check if 'b' is greater than both 'a' and 'c'
+    else if (b > a && b > c) {
+        return b;
+    }
+
+    // Otherwise 'c' is the biggest
+    else {
+        return c;
+    }
+}
+
+// Function call
+let result = bigNumber(10, 2, 6);
+
+// Display result
+console.log("Biggest number is:", result);
+
+
+// --------------------------------------------
+// Another method using normal if-else
+// --------------------------------------------
+
+let d = 5;
+let t = 10;
+let c = 15;
+
+// Check if d is biggest
+if (d > t && d > c) {
+    console.log("Bigger number is d:", d);
+}
+
+// Check if t is biggest
+else if (t > d && t > c) {
+    console.log("Bigger number is t:", t);
+}
+
+// Otherwise c is biggest
+else {
+    console.log("Bigger number is c:", c);
+}
